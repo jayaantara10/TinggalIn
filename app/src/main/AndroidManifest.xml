@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TinggalIn">
-        <activity android:name=".controller.RegisterPemilikActivity"></activity>
+        <activity android:name=".controller.ProfilPemilikActivity"></activity>
+        <activity
+            android:name=".controller.RegisterPemilikActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".controller.LoginPemilikActivity"
             android:screenOrientation="portrait">

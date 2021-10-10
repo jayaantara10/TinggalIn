@@ -30,4 +30,12 @@
     <string name="str_reg_term_and_condition2">Syarat &amp; Ketentuan</string>
     <string name="str_btn_cancel">Batal</string>
     <string name="str_btn_regist">Daftar</string>
+
+    <!--Login Register-->
+    <string name="str_title_profil_pemilik">PROFIL PEMILIK</string>
+    <string name="str_ex_name">Nama</string>
+    <string name="str_ex_age">umur</string>
+    <string name="str_ex_gender">jenis kelamin</string>
+    <string name="str_btn_back">Kembali</string>
+    <string name="str_btn_edit">Ubah</string>
 </resources>

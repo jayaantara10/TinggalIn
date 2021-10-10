@@ -3,6 +3,7 @@ package id.jayaantara.tinggalin.controller;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +38,9 @@ public class RegisterPemilikActivity extends AppCompatActivity implements View.O
     private Button btn_regist;
     private Button btn_cancel;
 
+    public static final String EXTRA_MESSAGE_USERNAME= "id.jayaantara.tinggalin.controller.MESSAGE_USERNAME";
+    public static final String EXTRA_MESSAGE_AGE= "id.jayaantara.tinggalin.controller.MESSAGE_AGE";
+    public static final String EXTRA_MESSAGE_GENDER= "id.jayaantara.tinggalin.controller.MESSAGE_GENDER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,6 +182,19 @@ public class RegisterPemilikActivity extends AppCompatActivity implements View.O
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+            }
+        });
+
+        btn_regist_popup = dialog.findViewById(R.id.btn_regist_popup);
+        btn_regist_popup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(RegisterPemilikActivity.this, ProfilPemilikActivity.class);
+                intent.putExtra(EXTRA_MESSAGE_USERNAME, regist_username.getText().toString());
+                intent.putExtra(EXTRA_MESSAGE_AGE, regist_age.getText().toString());
+                intent.putExtra(EXTRA_MESSAGE_GENDER, regist_gender.getText().toString());
+                startActivity(intent);
             }
         });
 

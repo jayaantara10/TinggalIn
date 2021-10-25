@@ -63,18 +63,18 @@ public class ProfilPemilikActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "Disini kamu bisa lihat profil kamu",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Disini kamu bisa lihat profil kamu ",Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Toast.makeText(this, "Okey, segera kembali ya aku tunggu",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Okey, segera kembali ya aku tunggu ",Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(this, "Sampai jumpa lagi"+username,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Sampai jumpa lagi "+username,Toast.LENGTH_SHORT).show();
     }
 }

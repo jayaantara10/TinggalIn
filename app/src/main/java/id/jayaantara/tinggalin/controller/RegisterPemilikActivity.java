@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,10 +18,13 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import id.jayaantara.tinggalin.DataHelper;
 import id.jayaantara.tinggalin.R;
 
 public class RegisterPemilikActivity extends AppCompatActivity implements View.OnClickListener {
 
+    protected Cursor cursor;
+    DataHelper db_helper;
 
     private EditText email;
     private EditText username;
@@ -189,6 +195,14 @@ public class RegisterPemilikActivity extends AppCompatActivity implements View.O
         btn_regist_popup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                SQLiteDatabase db = db_helper.getWritableDatabase();
+                db.execSQL("INSERT INTO tb_pemilik(email,username,password,gender,age) VALUES('"+
+                            regist_email+ "','"+
+                            regist_username+ "','"+
+                            regist_gender+ "','"+
+                            regist_age+ "')");
+                Toast.makeText(RegisterPemilikActivity.this, "Berhasil Mendaftarkan", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(RegisterPemilikActivity.this, ProfilPemilikActivity.class);
                 intent.putExtra(EXTRA_MESSAGE_USERNAME, regist_username.getText().toString());

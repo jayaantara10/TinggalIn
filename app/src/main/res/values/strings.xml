@@ -38,4 +38,22 @@
     <string name="str_ex_gender">jenis kelamin</string>
     <string name="str_btn_back">Kembali</string>
     <string name="str_btn_edit">Ubah</string>
+
+
+    <string name="str_title_list_kontrakan_activity">List Data Kontrakan Anda</string>
+    <string name="str_hint_search">Cari Kontrakan Anda disini!!</string>
+    <string name="str_title_list">List Kontrakan Milik Anda</string>
+    <string name="str_kontrakan_name">Ini Nama Kontrakan</string>
+    <string name="str_owner_name">Ini Nama Pemiliknya</string>
+    <string name="str_kontrakan_location">Ini Alamat kontrakan</string>
+    <string name="str_harga_sewa">Harga sewa: </string>
+
+    <string name="str_title_form_kontrakan">FORMULIR DATA KONTRAKAN</string>
+    <string name="str_hint_kontrakan_name">Nama Kontrakan</string>
+    <string name="str_hint_owner_name">Nama Pemilik</string>
+    <string name="str_hint_kontrakan_location">Alamat kontrakan</string>
+    <string name="str_hint_harga_sewa">Harga sewa per bulan</string>
+    <string name="str_btn_tambah">Tambah</string>
+
+
 </resources>
